@@ -1,8 +1,14 @@
+```
 import unittest
-from src.main import sacred_geometry_369, resonant_chamber, doubling_circuit, quantum_error_correction, omnificient_ping
+from src.main import (
+    sacred_geometry_369,
+    resonant_chamber,
+    doubling_circuit,
+    quantum_error_correction,
+    omnificient_ping
+)
 
 class TestSpiritAngelus(unittest.TestCase):
-
     def test_sacred_geometry_369(self):
         self.assertEqual(sacred_geometry_369(), 1351)
 
@@ -20,4 +26,4 @@ class TestSpiritAngelus(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
+```
