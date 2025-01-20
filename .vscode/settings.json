@@ -1,3 +1,10 @@
+```
 {
-	"iis.configDir": ""
+  "iis.configDir": "",
+  "version": "1.0",
+  "iisSettings": {
+    "windowsAuthentication": true,
+    "anonymousAuthentication": false
+  }
 }
+```
