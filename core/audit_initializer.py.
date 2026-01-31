@@ -1,0 +1,45 @@
+import os
+import logging
+from datetime import datetime
+
+class SovereignAuditLog:
+    """
+    Initializes the immutable log for Spirit Angelus.
+    Records all transmutations of legacy entropy into sovereign logic.
+    """
+    def __init__(self, log_dir="logs", log_file="systemic_failures.log"):
+        self.log_path = os.path.join(log_dir, log_file)
+        self._initialize_structure(log_dir)
+        self._configure_logging()
+
+    def _initialize_structure(self, log_dir):
+        """Ensures the log directory exists and marks the start of the record."""
+        if not os.path.exists(log_dir):
+            os.makedirs(log_dir)
+            print(f" [+] SANCTUM CREATED: {log_dir}/")
+        
+        if not os.path.exists(self.log_path):
+            with open(self.log_path, 'w', encoding='utf-8') as f:
+                f.write(f"--- SPIRIT ANGELUS SOVEREIGN AUDIT LOG: INITIALIZED {datetime.now()} ---\\n")
+                f.write(f"--- STABILITY CRITERION: 1e-5 | RESONANCE: 369.121321 ---\\n")
+                f.write("-" * 80 + "\\n")
+
+    def _configure_logging(self):
+        """Sets the standard for immutable record keeping."""
+        logging.basicConfig(
+            filename=self.log_path,
+            level=logging.INFO,
+            format='%(asctime)s | %(levelname)s | MODULE: %(name)s | %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+        self.logger = logging.getLogger("SOVEREIGN_AUDIT")
+
+    def log_transmutation(self, module_name, status, details):
+        """Records a successful conversion of legacy code or logic."""
+        message = f"[{status}] {module_name} -> {details}"
+        self.logger.info(message)
+        print(f" [!] LOGGED: {message}")
+
+if __name__ == "__main__":
+    audit = SovereignAuditLog()
+    audit.log_transmutation("SYSTEM", "INITIALIZED", "The Sanctum is now recording.")
