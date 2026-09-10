@@ -1,1 +1,25 @@
-Nothing should be ignored since only Python source files (.py) were added and no build artifacts, dependencies, or temporary files are present in the changes.
+*.pyc
+__pycache__/
+*.log
+*.tmp
+*.swp
+.env
+.env.local
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+coverage/
+htmlcov/
+.coverage
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
+target/
+node_modules/
+.venv/
+venv/
+.julia/
+zig-cache/
+zig-out/
